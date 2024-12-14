@@ -1,0 +1,78 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('images/default-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+  }
+  
+  header h1 {
+    margin-bottom: 10px;
+  }
+  
+  #clock {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: white;
+  }
+  
+  .search input, .search button {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .weather-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .weather-icon img {
+    width: 100px;
+  }
+  
+  .forecast-slides {
+    display: flex;
+    overflow-x: scroll;
+    gap: 10px;
+  }
+  
+  .forecast-slides .forecast-card {
+    min-width: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .forecast-slides .forecast-card:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Background Animation */
+  @keyframes slideBackground {
+    from {
+      background-position: 0% 50%;
+    }
+    to {
+      background-position: 100% 50%;
+    }
+  }
+  
