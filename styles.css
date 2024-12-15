@@ -1,78 +1,86 @@
-/* Global Styles */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: url('images/default-bg.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    text-align: center;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-  }
-  
-  header h1 {
-    margin-bottom: 10px;
-  }
-  
-  #clock {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    color: white;
-  }
-  
-  .search input, .search button {
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  .weather-details {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .weather-icon img {
-    width: 100px;
-  }
-  
-  .forecast-slides {
-    display: flex;
-    overflow-x: scroll;
-    gap: 10px;
-  }
-  
-  .forecast-slides .forecast-card {
-    min-width: 150px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-  
-  .forecast-slides .forecast-card:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Background Animation */
-  @keyframes slideBackground {
-    from {
-      background-position: 0% 50%;
-    }
-    to {
-      background-position: 100% 50%;
-    }
-  }
-  
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
+
+.weather-frame {
+  background: rgba(255, 255, 255, 0.9);
+  border: 5px solid #4a90e2;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  padding: 20px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
+
+input, button {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 2px solid #4a90e2;
+  font-size: 16px;
+}
+
+button {
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+}
+
+.weather-info img {
+  width: 80px;
+}
+
+.forecast-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.forecast-card {
+  background: #f0f8ff;
+  padding: 10px;
+  border: 2px solid #4a90e2;
+  border-radius: 8px;
+  width: 70px;
+  text-align: center;
+}
+
+.forecast-card img {
+  width: 40px;
+  height: 40px;
+}
+
+.clock {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#app-frame {
+  width: 100%;
+  height: 100vh;
+  background-image: url('backgrounds/default.jpg'); /* Path to your default image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-shadow: 1px 1px 5px black;
+  transition: background-image 1s ease-in-out;
+}
+
+

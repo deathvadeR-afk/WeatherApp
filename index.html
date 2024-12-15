@@ -3,46 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
+  <title>Weather & AQI App</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Weather Forecast</h1>
-      <div id="clock"></div>
-      <div class="search">
-        <input type="text" id="city-input" placeholder="Enter city name">
-        <button id="search-btn">Search</button>
-        <button id="unit-btn">Switch to °F</button>
-      </div>
-    </header>
+  <div id="app-frame">
+    <!-- Weather Frame -->
+    <div class="weather-frame" id="weatherFrame">
+      <h1>Weather & Forecast</h1>
+      <div class="weather-content">
+        <!-- Search Input -->
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button id="searchButton">Search</button>
 
-    <!-- Current Weather Section -->
-    <section id="current-weather" class="hidden">
-      <h2 id="city-name"></h2>
-      <div class="weather-details">
-        <div class="weather-icon">
-          <img id="weather-thumbnail" src="" alt="Weather Icon">
+        <!-- Weather Info -->
+        <div id="aqi-section">
+          <h3>Air Quality Index</h3>
+          <div id="aqi">AQI: --</div>
+          <div id="aqi-status">Status: --</div>
         </div>
-        <div class="weather-info">
-          <p id="temperature"></p>
-          <p id="description"></p>
-          <p id="humidity"></p>
-          <p id="wind-speed"></p>
+        
+        <div id="weatherInfo" class="weather-info">
+          <h2 id="cityName">City Name</h2>
+          <img id="weatherIcon" src="icons/default.png" alt="Weather Icon">
+          <p id="temperature">Temperature: -- °C</p>
+          <p id="humidity">Humidity: -- %</p>
+          <p id="windSpeed">Wind Speed: -- km/h</p>
+          <p id="rainAlert" class="rain-alert"></p>
+          <p id="clock" class="clock"></p>
         </div>
-      </div>
-      <p id="precaution" class="hidden"></p>
-    </section>
 
-    <!-- Forecast Section -->
-    <section id="forecast" class="hidden">
-      <h2>5-Day Forecast</h2>
-      <div class="forecast-slides">
-        <!-- Forecast cards will be added dynamically -->
+        <!-- 5-Day Forecast -->
+        <div id="forecastContainer" class="forecast-container"></div>
       </div>
-    </section>
+    </div>
   </div>
+  
+  <script src="script.js"></script>
 </body>
 </html>
